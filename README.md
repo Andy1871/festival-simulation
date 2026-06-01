@@ -19,6 +19,8 @@ The app runs entirely in the browser. Once the dev server is started, the app wo
 **Prerequisites**: Node.js 18+ and npm.
 
 ```bash
+git clone https://github.com/Andy1871/festival-simulation.git
+cd 'festival-simulation'
 npm install
 npm run dev
 ```
