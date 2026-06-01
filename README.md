@@ -14,7 +14,7 @@ A browser-based festival planning and simulation tool. Design a music festival, 
 
 ## Running Locally
 
-The app runs entirely in the browser. There is no backend, no database, and no internet connection required — once the dev server is started, the app works fully offline. All data (accounts, saved festivals) is stored in your browser's localStorage.
+The app runs entirely in the browser. Once the dev server is started, the app works fully offline. All data (accounts, saved festivals) is stored in your browser's localStorage.
 
 **Prerequisites**: Node.js 18+ and npm.
 
@@ -87,21 +87,21 @@ Beyond basic ticket sales, the simulation models:
 ### Export
 
 From the Overview tab, export the current forecast as:
-- **CSV** — flat key/value file, opens in Excel or Google Sheets
-- **JSON** — full config + all metrics, suitable for programmatic use
+- **CSV** 
+- **JSON** 
 
 ## Project Structure
 
 ```
 src/
 ├── auth/               AuthContext (register, login, logout, localStorage session)
-├── calculations/       14 pure calculation functions + runSimulation orchestrator
+├── calculations/       14 calculation functions + runSimulation 
 │   └── __tests__/      Vitest unit tests
 ├── components/
 │   ├── auth/           LoginPage
 │   ├── layout/         ForecastBar (live metrics strip)
 │   ├── ui/             Button, Toggle, FormField, StatusDot, etc.
-│   └── wizard/         WizardLayout, WizardSidebar, all step components
+│   └── wizard/         WizardLayout, WizardSidebar, all step & section components
 ├── export/             exportToJSON, exportToCSV
 ├── hooks/              useWizardState, useSimulation
 ├── storage/            Per-user config persistence (localStorage)
